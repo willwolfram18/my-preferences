@@ -16,7 +16,7 @@
 actor Alice
 actor Bob
 actor Clare
-actor Billy [[../../resources/billy.svg]]
+actor Billy [[./billy.svg]]
 
 Alice -> Bob: Tell Clare "Hello!"
 
