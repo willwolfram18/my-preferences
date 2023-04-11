@@ -16,7 +16,8 @@ jobs:
       - name: Commit markdown changes
         shell: bash
         run: |-
-          git show
+          git status
+          git status --porcelain
 
           # if [ -z "$(git status --porcelain)" ]; then
           #   git config user.email "$(git log -n 1 --format=%ae)"
