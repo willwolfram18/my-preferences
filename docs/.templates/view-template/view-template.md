@@ -30,7 +30,7 @@ note over Alice: wait 10 mins
 Alice ->(20) Clare: Texts "Hi again!"
 @enduml
 ```
-![Primary representation](../resources/template-primary-representation.svg)
+!(../resources/template-primary-representation.svg)
 
 # Element Catalog
 <!-- Fill out the below sections with any relevant information or N/A -->
