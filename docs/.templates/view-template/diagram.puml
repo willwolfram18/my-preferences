@@ -1,0 +1,21 @@
+@startuml
+actor Alice
+actor Bob
+actor Clare
+
+Alice -> Bob: Tell Clare "Hello!"
+
+activate Bob
+Bob -> Clare: Alice says "Hello!"
+
+activate Clare
+Clare --> Bob: Hello, Alice!
+deactivate Clare
+
+Bob --> Alice: Clare says "Hello, Alice!"
+deactivate Bob
+
+note over Alice: wait 10 mins
+
+Alice ->(20) Clare: Texts "Hi again!"
+@enduml
