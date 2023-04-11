@@ -1,5 +1,7 @@
-if [[ $(git status --porcelain) ]]; then
-    echo "It's dirty!"
-else
+
+
+if [ -z "$(git status --porcelain)" ]; then
     echo "It's clean"
+else
+    echo "It's dirty!"
 fi
