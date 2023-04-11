@@ -14,7 +14,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Run puml-for-markdown
-        uses: ./.github/actions/render-plant-uml@main
+        uses: willwolfram18/my-preferences/.github/actions/render-plant-uml@main
       - name: Commit markdown changes
         shell: bash
         run: |-
