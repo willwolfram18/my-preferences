@@ -16,12 +16,14 @@ jobs:
       - name: Commit markdown changes
         shell: bash
         run: |-
-          if [ -z "$(git status --porcelain)" ]; then
-            git config user.email "$(git log -n 1 --format=%ae)"
-            git config user.name "$(git log -n 1 --format=%an)"
-            git add .
-            git commit -m "Adding rendered PlantUML images"
-            git push
-          else
-            echo "No changes to commit"
-          fi
+          git show
+
+          # if [ -z "$(git status --porcelain)" ]; then
+          #   git config user.email "$(git log -n 1 --format=%ae)"
+          #   git config user.name "$(git log -n 1 --format=%an)"
+          #   git add .
+          #   git commit -m "Adding rendered PlantUML images"
+          #   git push
+          # else
+          #   echo "No changes to commit"
+          # fi
