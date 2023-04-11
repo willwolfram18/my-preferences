@@ -16,7 +16,7 @@
 actor Alice
 actor Bob
 actor Clare
-actor Billy
+actor Billy [[../../resources/billy.svg]]
 
 Alice -> Bob: Tell Clare "Hello!"
 
@@ -33,6 +33,14 @@ deactivate Bob
 note over Alice: wait 10 mins
 
 Alice ->(20) Clare: Texts "Hi again!"
+@enduml
+```
+
+```plantuml:billy
+@startuml
+actor Billy
+
+Billy -> Billy: Talk to self
 @enduml
 ```
 
