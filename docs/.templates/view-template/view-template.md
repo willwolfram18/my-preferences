@@ -7,7 +7,7 @@
     added and rendered in the doc
 -->
 
-```plantuml:primary-representation
+```plantuml:template-primary-representation
 @startuml Example
 actor Alice
 actor Bob
@@ -30,7 +30,7 @@ note over Alice: wait 10 mins
 Alice ->(20) Clare: Texts "Hi again!"
 @enduml
 ```
-![Primary representation](./primary-representation.svg)
+![Primary representation](../resources/template-primary-representation.svg)
 
 # Element Catalog
 <!-- Fill out the below sections with any relevant information or N/A -->
