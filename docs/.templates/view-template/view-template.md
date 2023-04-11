@@ -15,6 +15,7 @@
 actor Alice
 actor Bob
 actor Clare
+actor Billy
 
 Alice -> Bob: Tell Clare "Hello!"
 
