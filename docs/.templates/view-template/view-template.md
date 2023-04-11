@@ -7,6 +7,9 @@
     added and rendered in the doc
 -->
 
+<details>
+<summary>View PlantUML</summary>
+
 ```plantuml:template-primary-representation
 @startuml Example
 actor Alice
@@ -30,7 +33,10 @@ note over Alice: wait 10 mins
 Alice ->(20) Clare: Texts "Hi again!"
 @enduml
 ```
-!(../resources/template-primary-representation.svg)
+
+</details>
+
+![](/docs/resources/template-primary-representation.svg)
 
 # Element Catalog
 <!-- Fill out the below sections with any relevant information or N/A -->
