@@ -1,0 +1,16 @@
+# yaml-language-server: $schema=https://json.schemastore.org/github-action.json
+name: Render PlantUML ins Markdown files
+description: Uses the puml-for-markdown CLI tool to render PlantUML files into Markdown
+runs:
+  using: composite
+  steps:
+    - name: Setting up node
+      uses: actions/setup-node@v1
+      with:
+        node-version: '16'
+    - name: Add plantuml for markdown
+      run: npm i -g puml-for-markdown
+      shell: bash
+    - name: Embed plantuml in markdown
+      run: puml-for-markdown
+      shell: bash

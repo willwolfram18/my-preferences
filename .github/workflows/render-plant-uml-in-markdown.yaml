@@ -1,0 +1,14 @@
+name: Insert PlantUML diagrams in markdown files
+on:
+  push:
+    paths:
+      - "**/*.md"
+      - "**/*.puml"
+jobs:
+  insert-plantuml:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run puml-for-markdown
+        uses: .github/actions/render-plant-uml.yaml
+      # - name: Update
