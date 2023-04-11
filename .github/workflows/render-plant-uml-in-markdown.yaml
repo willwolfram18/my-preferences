@@ -11,20 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Run puml-for-markdown
-        uses: willwolfram18/my-preferences/.github/actions/render-plant-uml@main
-      - name: Commit markdown changes
-        shell: bash
-        run: |-
-          git status
-          git status --porcelain
-
-          # if [ -z "$(git status --porcelain)" ]; then
-          #   git config user.email "$(git log -n 1 --format=%ae)"
-          #   git config user.name "$(git log -n 1 --format=%an)"
-          #   git add .
-          #   git commit -m "Adding rendered PlantUML images"
-          #   git push
-          # else
-          #   echo "No changes to commit"
-          # fi
+      - name: Render PlantUML
+        uses: grassedge/generate-plantuml-action@v1.5
+        with:
+          path: docs
+          message: "Render PlantUML files"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

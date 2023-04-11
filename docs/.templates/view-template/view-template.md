@@ -2,11 +2,35 @@
 > Replace this blockquote with a description of the diagram
 
 # Primary Representation
-<!-- 
+<!--
     Define PlantUML diagrams in .puml files, and then add MD comments, similar to the one below to have the images
     added and rendered in the doc
 -->
-<!-- ![Primary Representation](./diagram.puml) -->
+
+```plantuml:primary-representation
+@startuml Example
+actor Alice
+actor Bob
+actor Clare
+
+Alice -> Bob: Tell Clare "Hello!"
+
+activate Bob
+Bob -> Clare: Alice says "Hello!"
+
+activate Clare
+Clare --> Bob: Hello, Alice!
+deactivate Clare
+
+Bob --> Alice: Clare says "Hello, Alice!"
+deactivate Bob
+
+note over Alice: wait 10 mins
+
+Alice ->(20) Clare: Texts "Hi again!"
+@enduml
+```
+![Primary representation](./primary-representation.svg)
 
 # Element Catalog
 <!-- Fill out the below sections with any relevant information or N/A -->
