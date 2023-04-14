@@ -2,7 +2,7 @@
 using Serilog;
 using Serilog.Events;
 using Serilog.Formatting.Compact;
-using FIXME;
+using FIXME.Telemetry;
 
 Log.Logger = new LoggerConfiguration()
     .MinimumLevel.Debug()

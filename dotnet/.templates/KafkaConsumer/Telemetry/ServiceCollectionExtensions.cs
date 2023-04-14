@@ -4,7 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using OpenTelemetry.Trace;
 
-namespace FIXME;
+namespace FIXME.Telemetry;
 
 public static class ServiceCollectionExtensions
 {
