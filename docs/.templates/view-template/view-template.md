@@ -1,4 +1,5 @@
 # TODO DIAGRAM NAME
+This template is inspired by the ["Software Architecture View" template](https://wiki.sei.cmu.edu/confluence/display/SAD/Views) from the Software Engineer Institute's [_Documenting Software Architectures_ course](https://www.sei.cmu.edu/education-outreach/courses/course.cfm?coursecode=V18)at Carnegie Mellon University.
 > Replace this blockquote with a description of the diagram
 
 # Primary Representation
@@ -6,25 +7,27 @@
 ```mermaid
 sequenceDiagram
     actor Alice
+    box red Foo
     actor Bob
     actor Clare
-    actor Billy [[./billy.svg]]
+    end
 
-    Alice -> Bob: Tell Clare "Hello!"
+    autonumber
+    Alice ->> Bob: Tell Clare "Hello!"
 
     activate Bob
-    Bob -> Clare: Alice says "Hello!"
+    Bob --> Clare: Alice says "Hello!"
 
     activate Clare
-    Clare --> Bob: Hello, Alice!
+    Clare -->> Bob: Hello, Alice!
     deactivate Clare
 
-    Bob --> Alice: Clare says "Hello, Alice!"
+    Bob -->> Alice: Clare says "Hello, Alice!"
     deactivate Bob
 
     note over Alice: wait 10 mins
 
-    Alice ->(20) Clare: Texts "Hi again!"
+    Alice -) Clare: Texts "Hi again!"
 ```
 # Element Catalog
 <!-- Fill out the below sections with any relevant information or N/A -->
@@ -40,7 +43,7 @@ sequenceDiagram
 TODO(?) - probably links to Swagger/GraphQL/AsyncAPI specs?
 
 ## Element Behavior
-Maybe?
+TODO - figure out what makes sense to include
 
 # Context Diagram
 <!-- Probably want to create a reusable context diagram that can be pulled in here -->
