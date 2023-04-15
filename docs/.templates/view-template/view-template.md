@@ -4,54 +4,8 @@ This template is inspired by the ["Software Architecture View" template](https:/
 
 # Primary Representation
 
-```plantuml:sample-diagram
-@startuml
-actor Alice
-actor Bob
-actor Clare
-
-Alice -> Bob: Tell Clare "Hello!"
-activate Bob
-
-Bob -> Clare: Clare says "Hello!"
-activate Clare
-
-Clare --> Bob: Hello to you too, Alice!
-deactivate Clare
-
-Bob --> Alice: Clare says "Hello to you too!"
-deactivate Bob
-
-Alice -->(10) Clare: Texts "Hi again!"
-@enduml
-```
 ![](./sample-diagram.svg)
 
-```mermaid
-sequenceDiagram
-    actor Alice
-    box red Foo
-    actor Bob
-    actor Clare
-    end
-
-    autonumber
-    Alice ->> Bob: Tell Clare "Hello!"
-
-    activate Bob
-    Bob --> Clare: Alice says "Hello!"
-
-    activate Clare
-    Clare -->> Bob: Hello, Alice!
-    deactivate Clare
-
-    Bob -->> Alice: Clare says "Hello, Alice!"
-    deactivate Bob
-
-    note over Alice: wait 10 mins
-
-    Alice -) Clare: Texts "Hi again!"
-```
 # Element Catalog
 <!-- Fill out the below sections with any relevant information or N/A -->
 
