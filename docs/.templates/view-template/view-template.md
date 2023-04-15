@@ -4,6 +4,29 @@ This template is inspired by the ["Software Architecture View" template](https:/
 
 # Primary Representation
 
+```plantuml:sample-diagram
+@startuml
+actor Alice
+actor Bob
+actor Clare
+
+Alice -> Bob: Tell Clare "Hello!"
+activate Bob
+
+Bob -> Clare: Clare says "Hello!"
+activate Clare
+
+Clare --> Bob: Hello to you too, Alice!
+deactivate Clare
+
+Bob --> Alice: Clare says "Hello to you too!"
+deactivate Bob
+
+Alice -->(10) Clare: Texts "Hi again!"
+@enduml
+```
+![](./sample-diagram.svg)
+
 ```mermaid
 sequenceDiagram
     actor Alice
