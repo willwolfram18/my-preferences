@@ -4,7 +4,7 @@ This template is inspired by the ["Software Architecture View" template](https:/
 
 # Primary Representation
 
-![](./sample-diagram.svg)
+![](./sample-diagram.svg?)
 
 # Element Catalog
 <!-- Fill out the below sections with any relevant information or N/A -->
