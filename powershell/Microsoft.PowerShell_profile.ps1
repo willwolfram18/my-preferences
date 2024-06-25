@@ -1,7 +1,7 @@
 $userName = "TODO_FIXME"
 
 #region Modules
-if (Get-Module -ListAvailable -Name "oh-my-posh") {
+if ($(Get-Command "oh-my-posh")) {
     oh-my-posh init pwsh --config "C:\Users\${env:UserName}\AppData\Local\Programs\oh-my-posh\themes\agnoster.minimal.omp.json" | Invoke-Expression
 }
 else {
