@@ -2,23 +2,22 @@ $userName = "TODO_FIXME"
 
 #region Modules
 if ($(Get-Command "oh-my-posh")) {
-    oh-my-posh init pwsh --config "C:\Users\${env:UserName}\AppData\Local\Programs\oh-my-posh\themes\agnoster.minimal.omp.json" | Invoke-Expression
+    oh-my-posh init pwsh --config "C:\Users\$userName\AppData\Local\Programs\oh-my-posh\themes\atomic.omp.json" | Invoke-Expression
 }
 else {
     Write-Host -ForegroundColor Red "Missing oh-my-posh module: https://ohmyposh.dev/docs/installation/windows"
 }
 
-if (Get-Module -ListAvailable -Name "posh-git") {
-    Import-Module posh-git
-}
-else {
+if (-not (Get-Module -ListAvailable -Name "posh-git")) {
+    Write-Host -ForegroundColor Cyan "Posh-git module not installed, installing now..."
     Install-Module posh-git -Scope CurrentUser -Force
-    Import-Module posh-git
+    Write-Host -ForegroundColor Green "Finished posh-git install"
 }
+Import-Module posh-git
 
 if ($PSVersionTable.PSVersion.Major -ge 7) {
-    Set-PSReadLineKeyHandler -Chord "Tab" -Function AcceptSuggestion
-    Set-PSReadLineKeyHandler -Chord "Shift+Tab" -Function MenuComplete
+    Set-PSReadLineKeyHandler -Chord "Ctrl+Spacebar" -Function AcceptSuggestion
+    # Set-PSReadLineKeyHandler -Chord "Shift+Tab" -Function MenuComplete
 }
 #endregion
 
